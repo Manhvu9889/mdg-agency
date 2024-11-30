@@ -40,27 +40,31 @@ const Header: FC = (): ReactElement => {
 
     useEffect(() => {
         const path = window.location.pathname;
-        if (path === '/' || path.startsWith('/#')) {
-            setCurrentLang('EN');
-        } else if (path.startsWith('/ru')) {
+        if (path.startsWith('/ru')) {
             setCurrentLang('RU');
+        } else {
+            setCurrentLang('EN');
         }
     }, []);
 
     const handleLanguageChange = (newLang: 'EN' | 'RU') => {
-        const path = window.location.pathname;
+        const currentPath = window.location.pathname;
         const hash = window.location.hash;
 
         if (newLang === 'EN') {
-            const newPath = path.replace(/^\/ru/, '');
-            window.location.href = newPath || '/' + hash;
+            const newPath = currentPath.replace(/^\/ru/, '') || '/';
+            window.location.href = `${newPath}${hash}`;
         } else {
-            const newPath = path === '/' ? '/ru' : `/ru${path}`;
-            window.location.href = newPath + hash;
+            const newPath = !currentPath.startsWith('/ru')
+                ? `/ru${currentPath === '/' ? '' : currentPath}`
+                : currentPath;
+            window.location.href = `${newPath}${hash}`;
         }
     };
 
     useEffect(() => {
+        document.documentElement.style.scrollBehavior = 'smooth';
+
         if (window.location.pathname.startsWith('/news')) {
             setActiveSection('news');
             return;
@@ -71,21 +75,31 @@ const Header: FC = (): ReactElement => {
                 (item) => item.href.split('#')[1]
             );
 
+            let closestSection = sections[0];
+            let minDistance = Infinity;
+
             for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    if (rect.top <= 100 && rect.bottom >= 100) {
-                        setActiveSection(section);
-                        break;
+                    const distance = Math.abs(rect.top);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestSection = section;
                     }
                 }
             }
+
+            setActiveSection(closestSection);
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.documentElement.style.scrollBehavior = 'auto';
+        };
     }, []);
 
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -240,7 +254,9 @@ const Header: FC = (): ReactElement => {
                                         rel="noopener noreferrer"
                                         className="block rounded-lg bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-3 text-center text-base font-semibold text-white hover:shadow-lg"
                                     >
-                                        Contact Us
+                                        {currentLang === 'EN'
+                                            ? en.navigation.contact_label
+                                            : ru.navigation.contact_label}
                                     </a>
                                 </li>
                                 <li className="pt-4">
