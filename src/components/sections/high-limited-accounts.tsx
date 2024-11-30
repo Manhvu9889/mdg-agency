@@ -238,7 +238,7 @@ const HighLimitedAccounts: React.FC<HighLimitedAccountsProps> = ({
                                         <motion.img
                                             src={card.image.src}
                                             alt={card.title}
-                                            className="relative h-auto w-full rounded-xl object-contain lg:max-w-[180px]"
+                                            className="relative h-auto w-full rounded-xl object-contain"
                                             loading="lazy"
                                             whileHover={{
                                                 filter: 'brightness(1.1)',

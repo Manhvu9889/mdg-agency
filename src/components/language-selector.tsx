@@ -3,6 +3,8 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef, useState } from 'react';
 
+const FLAG_CDN_BASE = 'https://flagcdn.com/16x12';
+
 interface Language {
     code: 'EN' | 'RU';
     label: string;
@@ -28,12 +30,31 @@ interface LanguageSelectorProps {
     onLanguageChange: (code: Language['code']) => void;
 }
 
+const getFlagUrl = (countryCode: string) =>
+    `${FLAG_CDN_BASE}/${countryCode.toLowerCase()}.webp`;
+
+const FlagImage: React.FC<{
+    language: Language;
+    onError: () => void;
+}> = ({ language, onError }) => (
+    <img
+        src={getFlagUrl(language.flagCode)}
+        alt={`${language.label} flag`}
+        className="h-3 w-4 object-cover"
+        width={16}
+        height={12}
+        loading="lazy"
+        onError={onError}
+    />
+);
+
 const LanguageSelector: React.FC<LanguageSelectorProps> = ({
     className = '',
     currentLang,
     onLanguageChange
 }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const [flagError, setFlagError] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     useClickOutside(dropdownRef, () => setIsOpen(false));
@@ -43,8 +64,9 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
     );
     const nextLanguage = languages.find((lang) => lang.code !== currentLang);
 
-    const getFlagUrl = (countryCode: string) =>
-        `https://flagcdn.com/16x12/${countryCode.toLowerCase()}.webp`;
+    const handleImageError = () => {
+        setFlagError(true);
+    };
 
     return (
         <div
@@ -56,13 +78,12 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
                 onClick={() => onLanguageChange(nextLanguage?.code ?? 'EN')}
                 className="group flex items-center space-x-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:border-blue-600 hover:text-blue-600 md:hidden"
             >
-                <img
-                    src={getFlagUrl(selectedLanguage?.flagCode ?? 'us')}
-                    alt={`${selectedLanguage?.label} flag`}
-                    className="h-3 w-4 object-cover"
-                    width={16}
-                    height={12}
-                />
+                {selectedLanguage && !flagError && (
+                    <FlagImage
+                        language={selectedLanguage}
+                        onError={handleImageError}
+                    />
+                )}
                 <span>{selectedLanguage?.code}</span>
             </button>
 
@@ -70,13 +91,12 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
                 onClick={() => setIsOpen(!isOpen)}
                 className="group hidden items-center space-x-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:border-blue-600 hover:text-blue-600 md:flex"
             >
-                <img
-                    src={getFlagUrl(selectedLanguage?.flagCode ?? 'us')}
-                    alt={`${selectedLanguage?.label} flag`}
-                    className="h-3 w-4 object-cover"
-                    width={16}
-                    height={12}
-                />
+                {selectedLanguage && !flagError && (
+                    <FlagImage
+                        language={selectedLanguage}
+                        onError={handleImageError}
+                    />
+                )}
                 <span>{selectedLanguage?.code}</span>
                 <FontAwesomeIcon
                     icon={faChevronDown}
@@ -101,14 +121,12 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
                                     : 'text-gray-700'
                             }`}
                         >
-                            <img
-                                src={getFlagUrl(language.flagCode)}
-                                alt={`${language.label} flag`}
-                                className="h-3 w-4 object-cover"
-                                loading="lazy"
-                                width={16}
-                                height={12}
-                            />
+                            {!flagError && (
+                                <FlagImage
+                                    language={language}
+                                    onError={handleImageError}
+                                />
+                            )}
                             <span>{language.label}</span>
                         </button>
                     ))}
