@@ -1,0 +1,67 @@
+---
+import Header from '@/components/header.tsx';
+import favicon from '@/images/favicon.png';
+import 'aos/dist/aos.css';
+import ScrollToTop from '@/components/scroll-to-top.astro';
+interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
+}
+const {
+    title = 'MDG Agency - Premium Facebook Ads Account Management Solutions',
+    description = "Transform your digital advertising with MDG Agency's elite Facebook Ads account services. We deliver enterprise-level advertising accounts with guaranteed stability, unrestricted budget capabilities, and 24/7 expert support. Our fully-verified business accounts feature advanced targeting options, premium features, and strict policy compliance. Perfect for high-growth businesses, agencies, and enterprise clients seeking reliable, scalable advertising solutions. Get started today with MDG Agency - your trusted partner in digital advertising excellence.",
+    image = ''
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth font-montserrat">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href={favicon.src} type="image/png" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:image" content={image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+        <meta name="robots" content="index, follow" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="flex min-h-screen w-full flex-col">
+        <Header client:idle />
+        <main>
+            <slot />
+            <ScrollToTop />
+        </main>
+        <script>
+            import AOS from 'aos';
+            AOS.init({
+                once: false,
+                mirror: false,
+                offset: 100,
+                easing: 'ease-in-out'
+            });
+        </script>
+        <style is:global>
+            img {
+                @apply pointer-events-none select-none object-cover;
+            }
+        </style>
+    </body>
+</html>

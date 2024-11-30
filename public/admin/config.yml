@@ -1,0 +1,58 @@
+backend:
+    name: git-gateway
+    branch: main
+
+media_folder: 'src/assets'
+public_folder: 'src/assets'
+site_url: 'https://mdg-agency.netlify.app'
+locale: 'vi'
+show_preview_links: true
+description: 'Danh sách bài viết'
+slug:
+    encoding: 'ascii'
+    clean_accents: true
+    sanitize_replacement: '-'
+logo_url: 'https://github.com/ovftank.png'
+collections:
+    - name: 'bai-viet'
+      locale: 'vi'
+      label: 'Bài viết'
+      folder: 'src/content/bai-viet'
+      create: true
+      slug: '{{slug}}'
+      fields:
+          - {
+                label: 'Tiêu đề',
+                name: 'title',
+                widget: 'string',
+                required: true
+            }
+          - {
+                label: 'Mô tả',
+                name: 'description',
+                widget: 'text',
+                required: true
+            }
+          - { label: 'Ảnh OG', name: 'thumbnail', widget: 'image' }
+          - {
+                label: 'Danh mục',
+                name: 'category',
+                widget: 'select',
+                options:
+                    [
+                        'facebook',
+                        'tiktok',
+                        'youtube',
+                        'instagram',
+                        'content-writer',
+                        'other'
+                    ],
+                default: 'other'
+            }
+          - {
+                label: 'Thời gian đọc',
+                name: 'readTime',
+                widget: 'string',
+                default: '5 min read'
+            }
+          - { label: 'Nội dung', name: 'body', widget: 'markdown' }

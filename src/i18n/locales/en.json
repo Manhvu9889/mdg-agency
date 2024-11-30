@@ -1,0 +1,162 @@
+{
+    "navigation": {
+        "items": ["HOME", "SERVICE", "ABOUT US", "CONTACT", "NEWS", "FAQ"],
+        "contact_label": "CONTACT US"
+    },
+    "hero": {
+        "headline": "SOLUTIONS FOR FACEBOOK & GOOGLE ADS",
+        "subheadline": "Come aboard with MDG Agency today and unlock a *blue*Premium Agency Ad Account*blue* to **supercharge your revenue growth**. Say goodbye to concerns about restrictions and ad account suspensions.",
+        "details": "Enjoy limitless budget utilisation and experience exclusive privileges with our **Premium customer accounts** when you opt for our advertising services.",
+        "cta": {
+            "get_started": "Get Started Now",
+            "view_services": "View Our Services"
+        }
+    },
+    "services": {
+        "title": "MDG AGENCY SERVICE",
+        "highlight": "*yellow*MAXIMUM*yellow* *white*Budget Savings*white*",
+        "features": [
+            "*blue*Accept ALL Products*blue* including **GAMING, CRYPTO, RECRUITMENT, INVESTMENT**, and more!",
+            "*blue*FULL Setup Support*blue* from **Gologin/Adspower profile**, **Via**, **Page**, **Pixel**, **Ad accounts**, **Proxy**. *blue*Just run!*blue*",
+            "*blue*ONLY Rental Fee*blue* **NO hidden fees**. *blue*100% MONEY BACK*blue* upon termination of cooperation",
+            "*blue*24/7 Support Team*blue* **Always online**. *blue*Guaranteed service*blue* in all time zones"
+        ]
+    },
+    "high_limited_accounts": {
+        "title": "HIGH LIMITED ACCOUNTS",
+        "subtitle": "FOR YOUR PROFIT",
+        "pricing": {
+            "title": "Optimized Pricing",
+            "description": "Starting from just 4%",
+            "details": "Tailored plans designed for your specific needs with service fees starting from *blue*just 4%*blue*! Get the best value for your advertising with flexible, affordable pricing."
+        },
+        "ads_growth": {
+            "title": "Trusted Ads Growth",
+            "subtitle": "Unlock Premium Ad Accounts",
+            "details": "Partner with *blue*MDG Agency*blue* for trusted ad account rentals and dedicated support. Achieve sustainable growth and maximize ROI with confidence."
+        },
+        "process": {
+            "title": "Simple 4-Step Process",
+            "steps": [
+                {
+                    "title": "Start Here",
+                    "description": "Submit your quick request"
+                },
+                {
+                    "title": "Personal Consultation",
+                    "description": "Join a friendly discussion to customize your solution"
+                },
+                {
+                    "title": "Dedicated Support",
+                    "description": "Get instant access to your private support team"
+                },
+                {
+                    "title": "Ready to Go",
+                    "description": "Quick setup and immediate activation"
+                }
+            ]
+        }
+    },
+
+    "client_support": {
+        "title": "WE ARE ALWAYS PROACTIVE IN",
+        "subtitle": "SOLVING CLIENT ISSUES",
+        "features": [
+            {
+                "title": "Account Protection",
+                "description": "We *blue*always support*blue* and *blue*replace advertising accounts*blue* when issues arise."
+            },
+            {
+                "title": "Campaign Excellence",
+                "description": "*blue*Support and training*blue* for advertising campaign launching"
+            },
+            {
+                "title": "Stable Spend",
+                "description": "with our accounts you can",
+                "subdescription": "*blue*consistently spend $3,000/day*blue*"
+            },
+            {
+                "title": "Risk Management",
+                "description": "*blue*guarantee of safety*blue* of money and *blue*moneyback*blue* at any moment"
+            }
+        ]
+    },
+    "partners_customers": {
+        "title": "PARTNERS CUSTOMERS",
+        "subtitle": "ACCOMPANY WITH US",
+        "statistics": [
+            "Number of Uses",
+            "Reviews",
+            "Clients",
+            "Typical Partners"
+        ]
+    },
+    "about_us": {
+        "title": "ABOUT *blue*US*blue*",
+        "headline": "WHAT IS",
+        "description": [
+            "We are proud to be the provider of *blue*multi-platform Agency advertising accounts*blue* including **Facebook, Google**.",
+            "We are committed to *blue*quality service*blue*, *blue*fast support*blue*, the *blue*lowest SERVICE*blue* fee in the market, providing a *blue*comprehensive ecosystem*blue* for customers."
+        ],
+        "cta": "CONTACT US NOW"
+    },
+    "customer_support": {
+        "title": "Our 24/7 Customer Support Team",
+        "role": "Customer Support",
+        "contact": "Contact on Telegram"
+    },
+    "faq": {
+        "title": "FAQs",
+        "description": "Can't find the answer you're looking for? <span class=\"text-blue-300\">Feel free to contact us</span>.",
+        "questions": [
+            {
+                "question": "What are the <span class=\"text-blue-300\">benefits</span> of renting Facebook ad account agencies?",
+                "answer": "Renting ad accounts provides businesses with access to the <span class=\"text-blue-300\">expertise and resources</span> of established ad agencies, <span class=\"text-blue-300\">reducing the learning curve and potential pitfalls</span> associated with self-managed campaigns. It also allows businesses to leverage <span class=\"text-blue-300\">enterprise-level Business Managers (BM)</span>, gain <span class=\"text-blue-300\">24/7 Facebook representative support</span>, access the <span class=\"text-blue-300\">1000 data-points algorithm</span>, <span class=\"text-blue-300\">remove ad account restrictions</span>, and <span class=\"text-blue-300\">maximize</span> their monthly ad account spend."
+            },
+            {
+                "question": "What is the <span class=\"text-blue-300\">process</span> to get started?",
+                "answer": "– <span class=\"text-blue-300\">Please contact us</span>.\n– We <span class=\"text-blue-300\">explain the service</span> to you in detail.\n– You require an ad account.\n– You <span class=\"text-blue-300\">Receive Ad Account Within 24h-48h</span>.\n– You <span class=\"text-blue-300\">launch your ad</span>"
+            },
+            {
+                "question": "Do you work with all types of businesses?",
+                "answer": "We <span class=\"text-blue-300\">accept all industries</span> that do not violate the policies of the platforms. We will discuss in detail when we have the opportunity to work with you."
+            },
+            {
+                "question": "What payment methods do you accept?",
+                "answer": "We accept payment in crypto, specifically <span class=\"text-blue-300\">USDT</span>, for convenience. Additionally, we also accept payment through <span class=\"text-blue-300\">Payoneer</span>."
+            },
+            {
+                "question": "If I'm running a product that's not allowed on FB ads and the account gets disabled, will there be additional fees?",
+                "answer": "As we mentioned before, we don't need to know what product you want to run. You only have to pay <span class=\"text-blue-300\">6-10% of the total fee spent</span>, and providing a <span class=\"text-blue-300\">new ad account and new card is completely free</span>."
+            },
+            {
+                "question": "How can I access my account to run my campaigns after I have deposited the funds?",
+                "answer": "First, you need to download and register for a <span class=\"text-blue-300\">Adspower or Gologin</span> account (you can download it from the official Adspower.com or Gologin.com website). Then, you send an email with the account that you registered to us and we will <span class=\"text-blue-300\">share profiles</span> with you (profiles include an <span class=\"text-blue-300\">ad account and an account to run it, pages to run and pre-installed pixels</span>). You just need to <span class=\"text-blue-300\">log in to the profiles</span> that are specifically assigned to you to set up ads and make money."
+            },
+            {
+                "question": "Can you provide more information about the services offered by MDG Agency?",
+                "answer": "We offer a <span class=\"text-blue-300\">solution</span> for partners who want to run their products but do not have a healthy FB, GG ads account or page to do so. We <span class=\"text-blue-300\">accept all products</span> from our partners, including <span class=\"text-blue-300\">GAMING, CRYPTO, RECRUITMENT, INVESTMENT</span>, and more, and ensure that they will <span class=\"text-blue-300\">not experience any interruptions</span> while running their ads. We can provide <span class=\"text-blue-300\">multiple accounts</span> to our partners, and if any account fails, we will <span class=\"text-blue-300\">replace it immediately</span> to ensure the continuity of our clients' advertising campaigns."
+            },
+            {
+                "question": "How much do I have to pay to use your services?",
+                "answer": "Our partners will incur a <span class=\"text-blue-300\">only 10% fee</span> based on total spending (<span class=\"text-blue-300\">no additional fees</span> will be charged). This means that if you run ads worth <span class=\"text-blue-300\">$1000</span>, you need to pay an additional 6-10%, totaling <span class=\"text-blue-300\">$1060 – $1100</span>."
+            },
+            {
+                "question": "If I deposit $500 and have spent about $330 and my account provided by you is locked, what will happen to the remaining balance and how will I know?",
+                "answer": "Each Facebook account will have its own ad account. Additionally, the ad account we provide you will have an <span class=\"text-blue-300\">invoice that shows the amount you have spent</span>, so you can easily check if the balance matches. In your case, the remaining balance would be <span class=\"text-blue-300\">$170 ($500 – $330)</span>, which will be <span class=\"text-blue-300\">transferred to the ad account in the next cycle</span> we provide you. Alternatively, if you no longer want to use our service, we will <span class=\"text-blue-300\">refund the remaining $170</span> to you."
+            },
+            {
+                "question": "What is the minimum and maximum amount I can deposit and how much budget can you provide me with?",
+                "answer": "The minimum deposit fee is <span class=\"text-blue-300\">$50</span> – for first-time customers who want to test our product.\nThe minimum deposit fee is <span class=\"text-blue-300\">$200</span> – for customers who have used our services before.\nWe can provide a daily budget ranging from <span class=\"text-blue-300\">$100,000 to $500,000</span> for you."
+            },
+            {
+                "question": "Assuming you are running ads and your Facebook ads account is disabled, how long will it take for you to be provided with a new account from your side?",
+                "answer": "We will provide a <span class=\"text-blue-300\">new account immediately</span> upon receiving notification from you. Our support team is <span class=\"text-blue-300\">always available</span> with 1-2 people online to assist our partners."
+            },
+            {
+                "question": "Which one should I choose, an agency account or a regular account?",
+                "answer": "Although we provide both types of accounts: regular and agency accounts.\n\nI have a recommendation that if the customer's monthly budget is below $30,000, they should not run ads on an agency account.\n\nReasons:\n– The fees are expensive, with monthly maintenance fees of around $300-400 and setup fees of $400 per session.\n– In other words, with a budget below $30,000 per month, <span class=\"text-blue-300\">regular ad accounts are usually more cost-effective</span> than agency accounts by about $700-$800 in the first month and $400 in the following months.\n– While agency accounts are undoubtedly <span class=\"text-blue-300\">stronger</span> than regular accounts, we provide <span class=\"text-blue-300\">free replacements</span> if the Facebook ads account gets disabled. In summary, the quality is <span class=\"text-blue-300\">nearly the same</span>.\n\nAccording to my opinion, agency accounts are only suitable for <span class=\"text-blue-300\">large-scale projects</span> with short running durations, such as ICO campaigns, and require a budget of $10,000 per day or higher."
+            }
+        ]
+    }
+}

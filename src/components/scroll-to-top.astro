@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<button
+    id="scroll-to-top"
+    aria-label="Scroll to top"
+    class="fixed bottom-8 right-8 z-50 flex h-10 w-10 translate-y-12 items-center justify-center rounded-full bg-blue-600 text-white opacity-0 shadow-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl"
+>
+    <Icon name="fa6-solid:arrow-up" class="h-4 w-4" />
+</button>
+<script>
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    const toggleScrollToTopBtn = () => {
+        const scrollPosition = window.scrollY;
+        if (scrollToTopBtn) {
+            if (scrollPosition > 400) {
+                scrollToTopBtn.classList.remove('opacity-0', 'translate-y-12');
+                scrollToTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'translate-y-12');
+                scrollToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+    window.addEventListener('scroll', toggleScrollToTopBtn);
+    scrollToTopBtn?.addEventListener('click', scrollToTop);
+    document.addEventListener('astro:before-swap', () => {
+        window.removeEventListener('scroll', toggleScrollToTopBtn);
+        scrollToTopBtn?.removeEventListener('click', scrollToTop);
+    });
+</script>

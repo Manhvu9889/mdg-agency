@@ -1,0 +1,33 @@
+---
+import NewsItems from '@/components/news-items';
+import MainLayout from '@/layouts/main-layout.astro';
+import { getCollection } from 'astro:content';
+const posts = await getCollection('bai-viet');
+---
+
+<MainLayout>
+    <div class="bg-gray-50">
+        <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <div class="mb-16 space-y-4 text-center">
+                <h1
+                    class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl"
+                >
+                    <span
+                        class="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"
+                    >
+                        Latest News
+                    </span>{' '}
+                    & Updates
+                </h1>
+                <p
+                    class="mx-auto max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl"
+                >
+                    Stay informed with our <span
+                        class="font-medium text-blue-600">latest insights</span
+                    > about social media marketing and content creation.
+                </p>
+            </div>
+            <NewsItems client:only="react" posts={posts} />
+        </div>
+    </div>
+</MainLayout>
