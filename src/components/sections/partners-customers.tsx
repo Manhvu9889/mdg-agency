@@ -93,6 +93,7 @@ const StatItem: React.FC<StatItemProps> = ({ image, title, endValue }) => {
             className="flex items-center gap-4 rounded-lg p-4"
         >
             <img
+                loading="lazy"
                 src={image.src}
                 alt={title}
                 className="h-12 w-12 shrink-0 object-contain hue-rotate-[280deg] invert sm:h-14 sm:w-14"

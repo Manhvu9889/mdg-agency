@@ -81,5 +81,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
                 });
             });
         </script>
+        <style is:global>
+            img {
+                @apply pointer-events-none select-none object-cover;
+            }
+        </style>
     </body>
 </html>

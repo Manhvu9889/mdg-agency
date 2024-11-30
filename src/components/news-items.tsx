@@ -219,6 +219,7 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <img
+                                    loading="lazy"
                                     src={post.data.thumbnail.src}
                                     alt={post.data.title}
                                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
