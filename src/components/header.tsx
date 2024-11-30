@@ -133,6 +133,7 @@ const Header: FC = (): ReactElement => {
                             aria-label="Go to homepage"
                         >
                             <img
+                                loading="eager"
                                 src={Logo.src}
                                 alt="Company Logo"
                                 className="h-12 w-12"
