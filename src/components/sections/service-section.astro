@@ -1,0 +1,70 @@
+---
+import ServiceImage from '@/images/service-image.webp';
+import 'aos/dist/aos.css';
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+
+interface Props {
+    class?: string;
+    content: {
+        title: string;
+        highlight: string;
+        features: string[];
+    };
+    formatText: (text: string) => string;
+}
+
+const { class: className, content, formatText } = Astro.props;
+
+const serviceFeatures = content.features.map((feature) => {
+    return {
+        text: formatText(feature)
+    };
+});
+---
+
+<section class={className}>
+    <div class="flex flex-col-reverse items-center gap-12 md:flex-row">
+        <div class="w-full md:w-1/2" data-aos="fade-right">
+            <Image
+                src={ServiceImage}
+                alt="MDG Agency Services"
+                class="h-auto w-full rounded-2xl"
+                width={600}
+                height={400}
+                loading="lazy"
+            />
+        </div>
+
+        <div class="w-full space-y-8 md:w-1/2" data-aos="fade-left">
+            <h2 class="text-4xl font-bold text-white">{content.title}</h2>
+
+            <div class="rounded-xl bg-white/10 px-6 py-4 backdrop-blur-sm">
+                <p
+                    class="text-center text-xl"
+                    set:html={formatText(content.highlight)}
+                />
+            </div>
+
+            <div class="space-y-4">
+                {
+                    serviceFeatures.map((feature, index) => (
+                        <div
+                            class="flex items-center gap-3 rounded-xl bg-white/95 p-4 shadow-md transition-all hover:bg-white hover:shadow-lg"
+                            data-aos="fade-left"
+                            data-aos-delay={index * 100}
+                        >
+                            <div class="h-6 w-6 flex-shrink-0">
+                                <Icon
+                                    name="fa6-solid:check"
+                                    class="h-6 w-6 text-blue-600"
+                                />
+                            </div>
+                            <p class="text-gray-700" set:html={feature.text} />
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

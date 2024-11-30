@@ -1,0 +1,87 @@
+---
+import AboutImage from '@/images/about.webp';
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+interface AboutSectionContent {
+    title: string;
+    headline: string;
+    description: string[];
+    cta: string;
+}
+interface AboutSectionProps {
+    className: string;
+    content: AboutSectionContent;
+    formatText: (text: string) => string;
+}
+
+const {
+    className: className,
+    content,
+    formatText
+} = Astro.props as AboutSectionProps;
+const telegramLink = 'https://t.me/mdg_agency';
+---
+
+<section class={className}>
+    <div class="flex flex-col items-center justify-between gap-12 lg:flex-row">
+        <Image
+            src={AboutImage}
+            alt="MDG Agency Team"
+            loading="lazy"
+            class="w-[423px] object-cover"
+            data-aos="fade-right"
+        />
+        <div class="flex w-full flex-col gap-8" data-aos="fade-left">
+            <div class="flex flex-col gap-6">
+                <h1 class="text-4xl font-bold tracking-wide text-gray-900">
+                    <span
+                        set:html={formatText(content.title).replace(
+                            'semibold',
+                            ''
+                        )}
+                    />
+                </h1>
+                <h2 class="text-3xl font-bold tracking-wide lg:text-4xl">
+                    <span set:html={formatText(content.headline)} />
+                    <span class="inline-flex flex-col text-blue-600">
+                        MDG AGENCY
+                        <span class="h-[3px] w-full bg-[#0095FF]/20"></span>
+                    </span>?
+                </h2>
+                <div class="flex flex-col gap-6">
+                    <p
+                        class="text-lg leading-relaxed text-gray-700"
+                        data-aos="fade-left"
+                        data-aos-delay={100}
+                    >
+                        <span set:html={formatText(content.description[0])} />
+                    </p>
+                    <p
+                        class="text-lg leading-relaxed text-gray-700"
+                        data-aos="fade-left"
+                        data-aos-delay={200}
+                    >
+                        <span set:html={formatText(content.description[1])} />
+                    </p>
+                </div>
+            </div>
+            <div
+                class="flex justify-center pt-6 lg:justify-start"
+                data-aos="fade-left"
+                data-aos-delay={300}
+            >
+                <a
+                    href={telegramLink}
+                    target="_blank"
+                    class="group flex items-center overflow-hidden rounded-lg bg-[#0095FF] px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500 hover:shadow-xl"
+                >
+                    <span class="z-10">{content.cta}</span>
+                    <Icon
+                        name="fa6-solid:arrow-right"
+                        class="z-10 ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

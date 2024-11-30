@@ -1,0 +1,159 @@
+---
+import { Image } from 'astro:assets';
+import HeroImage from '@/images/hero-image.webp';
+
+interface Props {
+    class?: string;
+    content: {
+        headline: string;
+        subheadline: string;
+        details: string;
+        cta: {
+            get_started: string;
+            view_services: string;
+        };
+    };
+    formatText: (text: string) => string;
+}
+
+const { class: className, content, formatText } = Astro.props;
+const headline = content.headline;
+---
+
+<div
+    class:list={[
+        'flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-12',
+        className
+    ]}
+>
+    <div class="flex-1 space-y-8" data-aos="fade-right">
+        <div class="space-y-6">
+            <h1 class="space-y-2">
+                <span
+                    id="hero-main-title"
+                    class="block text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
+                >
+                </span>
+                <span
+                    id="hero-subtitle"
+                    class="block text-2xl font-bold tracking-tight text-blue-600 sm:text-3xl lg:text-4xl"
+                >
+                </span>
+            </h1>
+
+            <div class="space-y-4">
+                <p
+                    class="text-lg leading-relaxed text-gray-700"
+                    set:html={formatText(content.subheadline)}
+                />
+
+                <p
+                    class="text-lg leading-relaxed text-gray-700"
+                    set:html={formatText(content.details)}
+                />
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-lg font-semibold text-white shadow-sm transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+                {content.cta.get_started}
+            </a>
+            <a
+                href="#service"
+                class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-4 text-lg font-medium text-gray-700 transition-colors hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+                {content.cta.view_services}
+            </a>
+        </div>
+    </div>
+
+    <div class="flex flex-1 justify-center lg:justify-end" data-aos="fade-left">
+        <Image
+            src={HeroImage}
+            alt="MDG Agency Solutions"
+            class="animate-float h-[597px] w-auto rounded-2xl"
+            loading="eager"
+        />
+    </div>
+</div>
+
+<script is:inline define:vars={{ headline }}>
+    class TypeWriter {
+        constructor(element, text, speed = 100) {
+            this.element = element;
+            this.text = text;
+            this.speed = speed;
+            this.index = 0;
+            this.cursor = document.createElement('span');
+            this.cursor.innerHTML = '|';
+            this.cursor.style.opacity = '1';
+            this.cursor.style.animation = 'blink 1s step-end infinite';
+            this.element.appendChild(this.cursor);
+        }
+
+        async start() {
+            const type = () => {
+                if (this.index < this.text.length) {
+                    this.element.insertBefore(
+                        document.createTextNode(this.text.charAt(this.index)),
+                        this.cursor
+                    );
+                    this.index++;
+                    setTimeout(type, this.speed);
+                } else {
+                    this.cursor.remove();
+                }
+            };
+            type();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const mainTitleElement = document.getElementById('hero-main-title');
+        const subtitleElement = document.getElementById('hero-subtitle');
+
+        if (mainTitleElement && subtitleElement) {
+            const mainTitleWriter = new TypeWriter(
+                mainTitleElement,
+                'MDG AGENCY',
+                100
+            );
+            const subtitleWriter = new TypeWriter(
+                subtitleElement,
+                headline,
+                50
+            );
+            mainTitleWriter.start();
+            subtitleWriter.start();
+        }
+    });
+</script>
+
+<style>
+    @keyframes blink {
+        0%,
+        100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .animate-float {
+        animation: float 4s ease-in-out infinite;
+        will-change: transform;
+    }
+</style>

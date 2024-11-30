@@ -1,0 +1,98 @@
+---
+import MikeImage from '@/images/support_team/mike.webp';
+import MinaImage from '@/images/support_team/mina.webp';
+import TedImage from '@/images/support_team/ted.webp';
+import TracyImage from '@/images/support_team/tracy.webp';
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+interface SupportSectionProps {
+    className: string;
+    content: SupportSectionContent;
+    formatText: (text: string) => string;
+}
+interface SupportSectionContent {
+    title: string;
+    role: string;
+    contact: string;
+}
+const {
+    className: className,
+    content,
+    formatText
+} = Astro.props as SupportSectionProps;
+const supportTeam = [
+    {
+        name: 'Mike',
+        role: content.role,
+        image: MikeImage,
+        telegram: 'https://t.me/mike_mdgagency'
+    },
+    {
+        name: 'Mina',
+        role: content.role,
+        image: MinaImage,
+        telegram: 'https://t.me/mina_mdgagency'
+    },
+    {
+        name: 'Ted',
+        role: content.role,
+        image: TedImage,
+        telegram: 'https://t.me/Ted_MDGAgency'
+    },
+    {
+        name: 'Tracy',
+        role: content.role,
+        image: TracyImage,
+        telegram: 'https://t.me/Tracy_MDGAgency'
+    }
+];
+---
+
+<section class={className}>
+    <h2
+        class="mb-8 text-center text-2xl font-bold text-blue-600 sm:text-3xl md:mb-12 lg:text-4xl"
+    >
+        <span set:html={formatText(content.title)} />
+    </h2>
+    <div
+        class="grid grid-cols-2 gap-4 px-2 sm:gap-6 sm:px-4 md:gap-8 md:px-6 lg:grid-cols-4 lg:gap-10 lg:px-0"
+    >
+        {
+            supportTeam.map((member, index) => (
+                <a
+                    href={member.telegram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group relative flex flex-col items-center rounded-xl bg-white p-3 text-center transition-all duration-300 hover:-translate-y-2 sm:p-6"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                >
+                    <div class="relative mb-2 overflow-hidden rounded-full ring-2 ring-blue-100 sm:mb-4 sm:ring-4">
+                        <Image
+                            src={member.image}
+                            alt={member.name}
+                            class="h-20 w-20 transform rounded-full object-cover transition-transform duration-300 group-hover:scale-110 sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48"
+                            loading="lazy"
+                        />
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-b from-blue-500/0 to-blue-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 sm:text-xl lg:text-2xl">
+                        {member.name}
+                    </h3>
+                    <p class="text-xs text-gray-600 sm:text-sm lg:text-lg">
+                        {member.role}
+                    </p>
+                    <div class="mt-2 flex items-center gap-1 text-blue-500 sm:mt-3 sm:gap-2">
+                        <Icon
+                            name="fa6-brands:telegram"
+                            class="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6"
+                        />
+                        <span class="text-xs font-medium sm:text-sm lg:text-base">
+                            <span set:html={formatText(content.contact)} />
+                        </span>
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</section>

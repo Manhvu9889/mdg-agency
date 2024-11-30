@@ -1,0 +1,110 @@
+---
+import AboutSection from '@/components/sections/about-section.astro';
+import ClientSupportOverview from '@/components/sections/client-support-overview';
+import FAQs from '@/components/sections/faqs';
+import HeroSection from '@/components/sections/hero-section.astro';
+import HighLimitedAccounts from '@/components/sections/high-limited-accounts';
+import NewsSection from '@/components/sections/news-section.astro';
+import PartnersCustomers from '@/components/sections/partners-customers';
+import ServiceSection from '@/components/sections/service-section.astro';
+import SupportSection from '@/components/sections/support-section.astro';
+import en from '@/i18n/locales/en.json';
+import BackgroundImage from '@/images/background.webp';
+import MainLayout from '@/layouts/main-layout.astro';
+const containerClassName =
+    'mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8';
+const formatText = (text: string): string => {
+    return text
+        .replace(
+            /\*blue\*(.*?)\*blue\*/g,
+            '<span class="font-semibold text-blue-600">$1</span>'
+        )
+        .replace(
+            /\*yellow\*(.*?)\*yellow\*/g,
+            '<span class="font-semibold text-yellow-300">$1</span>'
+        )
+        .replace(
+            /\*white\*(.*?)\*white\*/g,
+            '<span class="font-semibold text-white">$1</span>'
+        )
+        .replace(
+            /\*\*(.*?)\*\*/g,
+            '<span class="font-semibold text-gray-700">$1</span>'
+        );
+};
+---
+
+<MainLayout>
+    <section id="home" class="bg-gradient-to-b from-yellow-50 to-white">
+        <HeroSection
+            class={containerClassName}
+            content={en.hero}
+            formatText={formatText}
+        />
+    </section>
+    <section id="service" class="bg-gradient-to-br from-blue-600 to-blue-700">
+        <ServiceSection
+            class={containerClassName}
+            content={en.services}
+            formatText={formatText}
+        />
+    </section>
+    <section
+        id="high-limited-accounts"
+        class="bg-gradient-to-b from-gray-50 to-white"
+    >
+        <HighLimitedAccounts
+            client:only="react"
+            className={containerClassName}
+            content={en.high_limited_accounts}
+        />
+    </section>
+    <section
+        id="client-support-overview"
+        class="bg-gradient-to-b from-gray-50 to-white"
+    >
+        <ClientSupportOverview
+            client:only="react"
+            content={en.client_support}
+        />
+    </section>
+    <section
+        id="partners-customers"
+        class="relative bg-gray-800"
+        style={`background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${BackgroundImage.src});`}
+    >
+        <PartnersCustomers
+            client:only="react"
+            className={containerClassName}
+            content={en.partners_customers}
+        />
+    </section>
+    <section id="about">
+        <AboutSection
+            className={containerClassName}
+            content={en.about_us}
+            formatText={formatText}
+        />
+    </section>
+    <section id="contact">
+        <SupportSection
+            className={containerClassName}
+            content={en.customer_support}
+            formatText={formatText}
+        />
+    </section>
+    <section id="news" class="bg-gradient-to-br from-blue-600 to-blue-700">
+        <NewsSection className={containerClassName} />
+    </section>
+    <section
+        id="faq"
+        class="relative bg-gray-800"
+        style={`background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${BackgroundImage.src});`}
+    >
+        <FAQs
+            client:only="react"
+            className={containerClassName}
+            faqData={en.faq}
+        />
+    </section>
+</MainLayout>
