@@ -60,7 +60,7 @@ const FAQs: React.FC<{ className: string; faqData: FAQSection }> = ({
                         <div
                             className={`transition-all duration-300 ease-in-out ${
                                 activeIndex === actualIndex
-                                    ? 'max-h-[1000px] opacity-100'
+                                    ? 'opacity-100'
                                     : 'max-h-0 opacity-0'
                             }`}
                         >
@@ -87,6 +87,7 @@ const FAQs: React.FC<{ className: string; faqData: FAQSection }> = ({
                     <h2 className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
                         FAQs
                     </h2>
+                    <span className="text-blue-300"></span>
                     <p className="mt-4 text-gray-400">
                         Everything you need to know about our services. Can't
                         find the answer you're looking for? Feel free to contact
