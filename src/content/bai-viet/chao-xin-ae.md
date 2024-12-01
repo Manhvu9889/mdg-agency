@@ -10,5 +10,3 @@ readTime: 5 min read
 **chữ đậm nè**
 
 # **chữ bự nè**
-
-![](src/assets/image_2024-11-29_22-03-45.png "ảnh nè")
