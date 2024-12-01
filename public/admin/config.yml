@@ -5,7 +5,7 @@ backend:
     roles: ["admin"]
 media_folder: 'src/assets'
 public_folder: 'src/assets'
-site_url: 'https://mdg-agency.netlify.app'
+site_url: 'https://mdg-agency.com/'
 locale: 'vi'
 show_preview_links: true
 description: 'Danh sách bài viết'
