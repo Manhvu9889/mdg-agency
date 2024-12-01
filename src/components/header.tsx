@@ -137,9 +137,9 @@ const Header: FC = (): ReactElement => {
                                 loading="eager"
                                 src={Logo.src}
                                 alt="Company Logo"
-                                className="h-24 w-24"
-                                width={96}
-                                height={96}
+                                className="h-20 w-20"
+                                width={80}
+                                height={80}
                             />
                         </a>
                     </div>
