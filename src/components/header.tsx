@@ -42,7 +42,8 @@ const Header: FC = (): ReactElement => {
         const path = window.location.pathname;
         if (path.startsWith('/ru')) {
             setCurrentLang('RU');
-        } else {
+        }
+        else {
             setCurrentLang('EN');
         }
     }, []);
@@ -136,9 +137,9 @@ const Header: FC = (): ReactElement => {
                                 loading="eager"
                                 src={Logo.src}
                                 alt="Company Logo"
-                                className="h-12 w-12"
-                                width={48}
-                                height={48}
+                                className="h-24 w-24"
+                                width={96}
+                                height={96}
                             />
                         </a>
                     </div>

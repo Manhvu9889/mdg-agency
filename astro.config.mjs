@@ -12,7 +12,7 @@ import playformCompress from '@playform/compress';
 import pageInsight from 'astro-page-insight';
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://mdg-agency.netlify.app/',
+    site: 'https://mdg-agency.com/',
     integrations: [
         tailwind(),
         icon({
@@ -118,7 +118,7 @@ export default defineConfig({
         pageInsight(),
         react(),
         sitemap({
-            filter: (page) => page !== 'https://mdg-agency.netlify.app/admin'
+            filter: (page) => page !== 'https://mdg-agency.com/admin'
         }),
         mdx()
     ],
