@@ -1,7 +1,8 @@
 backend:
     name: git-gateway
     branch: main
-
+    login: true
+    roles: ["admin"]
 media_folder: 'src/assets'
 public_folder: 'src/assets'
 site_url: 'https://mdg-agency.netlify.app'
