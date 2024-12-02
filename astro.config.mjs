@@ -25,7 +25,8 @@ export default defineConfig({
                     'bolt',
                     'dollar-sign',
                     'cubes',
-                    'arrow-right'
+                    'arrow-right',
+                    'arrow-left'
                 ],
                 'fa6-brands': ['telegram']
             }

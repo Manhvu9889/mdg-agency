@@ -18,10 +18,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth font-montserrat overflow-x-hidden">
+<html lang="en" class="overflow-x-hidden scroll-smooth font-montserrat">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link
@@ -63,6 +66,20 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
         <meta name="robots" content="index, follow" />
+        <script is:inline type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "MDG Agency",
+                "url": "https://mdg-agency.com",
+                "logo": "https://mdg-agency.com/favicon.png",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer service",
+                    "email": "admin@mdg-agency.com"
+                }
+            }
+        </script>
     </head>
     <body class="flex min-h-screen w-full flex-col overflow-x-hidden">
         <Header client:idle />
