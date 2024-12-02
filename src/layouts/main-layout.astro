@@ -18,7 +18,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth font-montserrat">
+<html lang="en" class="scroll-smooth font-montserrat overflow-x-hidden">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,7 +64,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta name="twitter:image" content={image} />
         <meta name="robots" content="index, follow" />
     </head>
-    <body class="flex min-h-screen w-full flex-col">
+    <body class="flex min-h-screen w-full flex-col overflow-x-hidden">
         <Header client:idle />
         <main>
             <slot />
