@@ -2,16 +2,18 @@
 import MainLayout from '@/layouts/main-layout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
+type Post = CollectionEntry<'bai-viet'>;
+
 export async function getStaticPaths() {
     const posts = await getCollection('bai-viet');
-    return posts.map((entry) => ({
+    return posts.map((entry: Post) => ({
         params: { slug: entry.slug },
         props: { entry }
     }));
 }
 
 type Props = {
-    entry: CollectionEntry<'bai-viet'>;
+    entry: Post;
 };
 
 const { entry } = Astro.props;
@@ -35,7 +37,7 @@ const post = entry.data;
             </div>
         </header>
         <div
-            class="prose prose-lg mx-auto max-w-none prose-headings:font-bold prose-a:text-blue-600"
+            class="prose prose-lg mx-auto max-w-none prose-headings:font-bold prose-a:text-blue-600 prose-img:mx-auto"
         >
             <Content />
         </div>

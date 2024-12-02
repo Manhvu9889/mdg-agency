@@ -62,7 +62,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
     const selectedLanguage = languages.find(
         (lang) => lang.code === currentLang
     );
-    const nextLanguage = languages.find((lang) => lang.code !== currentLang);
 
     const handleImageError = () => {
         setFlagError(true);
@@ -75,21 +74,8 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
             onClick={(e) => e.stopPropagation()}
         >
             <button
-                onClick={() => onLanguageChange(nextLanguage?.code ?? 'EN')}
-                className="group flex items-center space-x-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:border-blue-600 hover:text-blue-600 md:hidden"
-            >
-                {selectedLanguage && !flagError && (
-                    <FlagImage
-                        language={selectedLanguage}
-                        onError={handleImageError}
-                    />
-                )}
-                <span>{selectedLanguage?.code}</span>
-            </button>
-
-            <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="group hidden items-center space-x-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:border-blue-600 hover:text-blue-600 md:flex"
+                className="group flex items-center space-x-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-700 transition-all hover:border-blue-600 hover:text-blue-600"
             >
                 {selectedLanguage && !flagError && (
                     <FlagImage
@@ -107,7 +93,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 mt-2 hidden w-48 origin-top-right animate-dropdown rounded-lg border border-gray-100 bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5 md:block">
+                <div className="absolute right-0 mt-2 w-48 origin-top-right animate-dropdown rounded-lg border border-gray-100 bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5">
                     {languages.map((language) => (
                         <button
                             key={language.code}

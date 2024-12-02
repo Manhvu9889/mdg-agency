@@ -42,8 +42,7 @@ const Header: FC = (): ReactElement => {
         const path = window.location.pathname;
         if (path.startsWith('/ru')) {
             setCurrentLang('RU');
-        }
-        else {
+        } else {
             setCurrentLang('EN');
         }
     }, []);
@@ -200,17 +199,23 @@ const Header: FC = (): ReactElement => {
                         </a>
                     </div>
 
-                    <button
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="rounded-lg border border-gray-300 p-2 text-gray-900 transition-colors hover:bg-gray-100 md:hidden"
-                        aria-expanded={isMenuOpen}
-                        aria-label="Toggle navigation menu"
-                    >
-                        <FontAwesomeIcon
-                            icon={isMenuOpen ? faTimes : faBars}
-                            className="h-6 w-6"
+                    <div className="flex items-center space-x-2 md:hidden">
+                        <LanguageSelector
+                            currentLang={currentLang}
+                            onLanguageChange={handleLanguageChange}
                         />
-                    </button>
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="rounded-lg border border-gray-300 p-2 text-gray-900 transition-colors hover:bg-gray-100"
+                            aria-expanded={isMenuOpen}
+                            aria-label="Toggle navigation menu"
+                        >
+                            <FontAwesomeIcon
+                                icon={isMenuOpen ? faTimes : faBars}
+                                className="h-6 w-6"
+                            />
+                        </button>
+                    </div>
                 </div>
 
                 {isMenuOpen && (
@@ -260,13 +265,6 @@ const Header: FC = (): ReactElement => {
                                             ? en.navigation.contact_label
                                             : ru.navigation.contact_label}
                                     </a>
-                                </li>
-                                <li className="pt-4">
-                                    <LanguageSelector
-                                        className="w-full"
-                                        currentLang={currentLang}
-                                        onLanguageChange={handleLanguageChange}
-                                    />
                                 </li>
                             </ul>
                         </nav>
