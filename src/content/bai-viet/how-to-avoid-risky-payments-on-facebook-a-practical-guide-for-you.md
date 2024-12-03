@@ -11,8 +11,6 @@ readTime: 5 min read
 
 Step-by-step instructions:
 
-
-
 1️⃣ Access your Fan Page: First, navigate to your Fan Page.
 
 2️⃣ Create or select a post to advertise: Choose an existing post or create a new one, then click the “Boost” button.
@@ -23,13 +21,13 @@ Step-by-step instructions:
 
 5️⃣ Repeat the process: You can repeat this process multiple times to build a stable payment history.
 
-
-
 💡 Why Is This Method Effective?
 
+
+
+![](src/assets/meta_advantage_plus_guide3.webp)
+
 Manually paying after small campaigns helps you:
-
-
 
 ✔️ Establish a positive payment history, reducing the risk of account suspension.
 
@@ -37,12 +35,8 @@ Manually paying after small campaigns helps you:
 
 ✔️ Ensure your ad campaigns run smoothly.
 
-
-
 📌 Important Note:
 
 Make sure to follow this method consistently and carefully to keep your account safe.
-
-
 
 👉 Try it today to keep your ad campaigns stable and successful! Wishing you smooth launches and impactful campaigns! 🚀
