@@ -123,7 +123,7 @@ const Header: FC = (): ReactElement => {
     }, [isMenuOpen]);
 
     return (
-        <header className="sticky left-0 right-0 top-0 z-50 flex items-center justify-center bg-white shadow-lg backdrop-blur-sm">
+        <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-center bg-white shadow-lg backdrop-blur-sm">
             <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div className="flex-shrink-0 transition-transform hover:scale-105">

@@ -32,7 +32,9 @@ collections:
                 label: 'Mô tả',
                 name: 'description',
                 widget: 'text',
-                required: true
+                required: true,
+                pattern: ['^.{50,160}$', 'Must be between 50 and 160 characters'],
+                hint: 'Mô tả ngắn gọn từ 50-160 ký tự để tối ưu SEO'
             }
           - { label: 'Ảnh OG', name: 'thumbnail', widget: 'image' }
           - {

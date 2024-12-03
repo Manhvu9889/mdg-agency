@@ -4,13 +4,24 @@ import ClientSupportOverview from '@/components/sections/client-support-overview
 import FAQs from '@/components/sections/faqs';
 import HeroSection from '@/components/sections/hero-section.astro';
 import HighLimitedAccounts from '@/components/sections/high-limited-accounts';
-import NewsSection from '@/components/sections/news-section.astro';
+import NewsSection from '@/components/sections/news-section';
 import PartnersCustomers from '@/components/sections/partners-customers';
 import ServiceSection from '@/components/sections/service-section.astro';
 import SupportSection from '@/components/sections/support-section.astro';
 import zh from '@/i18n/locales/zh.json';
 import BackgroundImage from '@/images/background.webp';
 import MainLayout from '@/layouts/main-layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('bai-viet');
+const latestPosts = posts
+    .sort((a, b) => {
+        const dateA = new Date(a.data.readTime);
+        const dateB = new Date(b.data.readTime);
+        return dateB.getTime() - dateA.getTime();
+    })
+    .slice(0, 10);
+
 const containerClassName =
     'mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8';
 const formatText = (text: string): string => {
@@ -94,7 +105,11 @@ const formatText = (text: string): string => {
         />
     </section>
     <section id="news" class="bg-gradient-to-br from-blue-600 to-blue-700">
-        <NewsSection className={containerClassName} />
+        <NewsSection
+            client:only="react"
+            className={containerClassName}
+            posts={latestPosts}
+        />
     </section>
     <section
         id="faq"

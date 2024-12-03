@@ -23,7 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         <meta charset="UTF-8" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
         />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
@@ -33,13 +33,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             crossorigin
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="preload"
-            href={favicon.src}
-            as="image"
-            fetchpriority="high"
-        />
-        <link rel="shortcut icon" href={favicon.src} type="image/png" />
+        <link rel="icon" href={favicon.src} type="image/png" />
         <link
             rel="preload"
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
@@ -83,7 +77,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     </head>
     <body class="flex min-h-screen w-full flex-col overflow-x-hidden">
         <Header client:idle />
-        <main>
+        <main class="mt-20">
             <slot />
             <ScrollToTop />
         </main>

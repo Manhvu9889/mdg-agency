@@ -82,23 +82,20 @@ const FAQs: React.FC<{ className: string; faqData: FAQSection }> = ({
 
     return (
         <section className={className}>
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-3xl text-center">
-                    <h2 className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
-                        FAQs
-                    </h2>
-                    <span className="text-blue-300"></span>
-                    <p className="mt-4 text-gray-400">
-                        Everything you need to know about our services. Can't
-                        find the answer you're looking for? Feel free to contact
-                        us.
-                    </p>
-                </div>
+            <div className="mx-auto max-w-3xl text-center">
+                <h2 className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
+                    FAQs
+                </h2>
+                <span className="text-blue-300"></span>
+                <p className="mt-4 text-gray-400">
+                    Everything you need to know about our services. Can't find
+                    the answer you're looking for? Feel free to contact us.
+                </p>
+            </div>
 
-                <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
-                    {renderFAQColumn(leftColumnFAQs, 0)}
-                    {renderFAQColumn(rightColumnFAQs, midPoint)}
-                </div>
+            <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
+                {renderFAQColumn(leftColumnFAQs, 0)}
+                {renderFAQColumn(rightColumnFAQs, midPoint)}
             </div>
         </section>
     );
