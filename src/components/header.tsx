@@ -31,7 +31,7 @@ const ruNavigationItems: NavItem[] = [
     { label: ru.navigation.items[5], href: '/ru#faq' }
 ] as const;
 
-const telegramLink = 'https://t.me/mike_mdgagency';
+const telegramLink = 'https://t.me/MDG_Agency';
 const Header: FC = (): ReactElement => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
