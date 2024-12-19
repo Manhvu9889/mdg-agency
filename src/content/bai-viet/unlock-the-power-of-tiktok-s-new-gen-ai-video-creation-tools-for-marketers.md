@@ -1,13 +1,15 @@
 ---
 title: Unlock the Power of TikTok’s New Gen AI Video Creation Tools for Marketers
 description: Unlock TikTok's Gen AI video creation tools with Rent TikTok Ad
-  Account. With TikTok Ad Account Rental, easily create and customize content,
-  scale your campaigns, and maximize your brand’s reach
+    Account. With TikTok Ad Account Rental, easily create and customize content,
+    scale your campaigns, and maximize your brand’s reach
 thumbnail: src/assets/tiktok_video_generation.webp
 category: tiktok
 readTime: 5 min read
+date: 19/12/2024
 ---
-![Unlock TikTok's Gen AI video creation tools with Rent TikTok Ad Account. With TikTok Ad Account Rental, easily create and customize content, scale your campaigns, and maximize your brand’s reach](src/assets/tiktok_video_generation.webp "Unlock the Power of TikTok’s New Gen AI Video Creation Tools for Marketers")
+
+![Unlock TikTok's Gen AI video creation tools with Rent TikTok Ad Account. With TikTok Ad Account Rental, easily create and customize content, scale your campaigns, and maximize your brand’s reach](src/assets/tiktok_video_generation.webp 'Unlock the Power of TikTok’s New Gen AI Video Creation Tools for Marketers')
 
 TikTok is revolutionizing the way businesses create and share content with the launch of its new AI video generation tools. As part of its Symphony Creative Studio, TikTok now allows business users to generate video clips easily and efficiently, even without a background in video production or platform-specific knowledge.
 
@@ -23,7 +25,7 @@ Another exciting feature is the ability to include a digital avatar that narrate
 
 Moreover, businesses can edit and customize the AI-generated content before using it, ensuring it aligns with their specific marketing goals. This flexibility allows for greater control over the final output, resulting in more impactful and tailored content for your audience.
 
-![Edit and customize outputs with TikTok’s AI tools before using them](src/assets/tiktok_video_generation2.webp "You’ll also be able to edit and customize the outputs before using them.")
+![Edit and customize outputs with TikTok’s AI tools before using them](src/assets/tiktok_video_generation2.webp 'You’ll also be able to edit and customize the outputs before using them.')
 
 ### Why TikTok’s AI Tools Matter for Marketers
 

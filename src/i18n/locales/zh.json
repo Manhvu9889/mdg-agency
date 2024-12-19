@@ -1,168 +1,156 @@
 {
     "navigation": {
-      "items": [
-        "家",
-        "服务",
-        "关于我们",
-        "接触",
-        "消息",
-        "常问问题"
-      ],
-      "contact_label": "联系我们"
+        "items": ["家", "服务", "关于我们", "接触", "消息", "常问问题"],
+        "contact_label": "联系我们"
     },
     "hero": {
-      "headline": "Facebook 和 Google 广告解决方案",
-      "subheadline": "立即加入 MDG Agency 并解锁*蓝色*高级代理广告帐户*蓝色*以**促进您的收入增长**。",
-      "details": "当您选择我们的广告服务时，您可以享受无限的预算利用并体验我们的**高级客户帐户**的独家特权。",
-      "cta": {
-        "get_started": "立即开始",
-        "view_services": "查看我们的服务"
-      }
+        "headline": "Facebook 和 Google 广告解决方案",
+        "subheadline": "立即加入 MDG Agency 并解锁*蓝色*高级代理广告帐户*蓝色*以**促进您的收入增长**。",
+        "details": "当您选择我们的广告服务时，您可以享受无限的预算利用并体验我们的**高级客户帐户**的独家特权。",
+        "cta": {
+            "get_started": "立即开始",
+            "view_services": "查看我们的服务"
+        }
     },
     "services": {
-      "title": "千年发展目标代理服务",
-      "highlight": "*黄色*最大*黄色* *白色*节省预算*白色*",
-      "features": [
-        "*蓝色*接受所有产品*蓝色*包括**游戏、加密货币、招聘、投资**等等！",
-        "*蓝色*完整设置支持*蓝色*来自 **Gologin/Adspower 配置文件**、**Via**、**Page**、**Pixel**、**广告帐户**、**代理**。 ",
-        "*蓝色*仅租金*蓝色* **无隐藏费用**。 ",
-        "*蓝色*24/7 支持团队*蓝色* **始终在线**。 "
-      ]
+        "title": "千年发展目标代理服务",
+        "highlight": "*黄色*最大*黄色* *白色*节省预算*白色*",
+        "features": [
+            "*蓝色*接受所有产品*蓝色*包括**游戏、加密货币、招聘、投资**等等！",
+            "*蓝色*完整设置支持*蓝色*来自 **Gologin/Adspower 配置文件**、**Via**、**Page**、**Pixel**、**广告帐户**、**代理**。 ",
+            "*蓝色*仅租金*蓝色* **无隐藏费用**。 ",
+            "*蓝色*24/7 支持团队*蓝色* **始终在线**。 "
+        ]
     },
     "high_limited_accounts": {
-      "title": "高限额账户",
-      "subtitle": "为了您的利益",
-      "pricing": {
-        "title": "优化定价",
-        "description": "仅 4% 起",
-        "details": "针对您的特定需求而设计的定制计划，服务费*蓝色*仅 4%*蓝色* 起！"
-      },
-      "ads_growth": {
-        "title": "值得信赖的广告增长",
-        "subtitle": "解锁高级广告帐户",
-        "details": "与 *blue*MDG Agency*blue* 合作，获得值得信赖的广告帐户租赁和专门支持。"
-      },
-      "process": {
-        "title": "简单的 4 步流程",
-        "steps": [
-          {
-            "title": "从这里开始",
-            "description": "提交您的快速请求"
-          },
-          {
-            "title": "个人咨询",
-            "description": "加入友好的讨论来定制您的解决方案"
-          },
-          {
-            "title": "专门的支持",
-            "description": "立即联系您的私人支持团队"
-          },
-          {
-            "title": "准备出发",
-            "description": "快速设置并立即激活"
-          }
-        ]
-      }
+        "title": "高限额账户",
+        "subtitle": "为了您的利益",
+        "pricing": {
+            "title": "优化定价",
+            "description": "仅 4% 起",
+            "details": "针对您的特定需求而设计的定制计划，服务费*蓝色*仅 4%*蓝色* 起！"
+        },
+        "ads_growth": {
+            "title": "值得信赖的广告增长",
+            "subtitle": "解锁高级广告帐户",
+            "details": "与 *blue*MDG Agency*blue* 合作，获得值得信赖的广告帐户租赁和专门支持。"
+        },
+        "process": {
+            "title": "简单的 4 步流程",
+            "steps": [
+                {
+                    "title": "从这里开始",
+                    "description": "提交您的快速请求"
+                },
+                {
+                    "title": "个人咨询",
+                    "description": "加入友好的讨论来定制您的解决方案"
+                },
+                {
+                    "title": "专门的支持",
+                    "description": "立即联系您的私人支持团队"
+                },
+                {
+                    "title": "准备出发",
+                    "description": "快速设置并立即激活"
+                }
+            ]
+        }
     },
     "client_support": {
-      "title": "我们始终积极主动",
-      "subtitle": "解决客户问题",
-      "features": [
-        {
-          "title": "账户保护",
-          "description": "当出现问题时，我们*蓝色*始终支持*蓝色*并*蓝色*更换广告帐户*蓝色*。"
-        },
-        {
-          "title": "卓越活动",
-          "description": "*蓝色*支持和培训*蓝色*广告活动启动"
-        },
-        {
-          "title": "稳定的支出",
-          "description": "通过我们的账户您可以",
-          "subdescription": "*蓝色*每天持续花费 3,000 美元*蓝色*"
-        },
-        {
-          "title": "风险管理",
-          "description": "*蓝色*安全保证*蓝色*金钱和*蓝色*退款*蓝色*随时"
-        }
-      ]
+        "title": "我们始终积极主动",
+        "subtitle": "解决客户问题",
+        "features": [
+            {
+                "title": "账户保护",
+                "description": "当出现问题时，我们*蓝色*始终支持*蓝色*并*蓝色*更换广告帐户*蓝色*。"
+            },
+            {
+                "title": "卓越活动",
+                "description": "*蓝色*支持和培训*蓝色*广告活动启动"
+            },
+            {
+                "title": "稳定的支出",
+                "description": "通过我们的账户您可以",
+                "subdescription": "*蓝色*每天持续花费 3,000 美元*蓝色*"
+            },
+            {
+                "title": "风险管理",
+                "description": "*蓝色*安全保证*蓝色*金钱和*蓝色*退款*蓝色*随时"
+            }
+        ]
     },
     "partners_customers": {
-      "title": "合作伙伴 客户",
-      "subtitle": "与我们同行",
-      "statistics": [
-        "使用次数",
-        "评论",
-        "客户",
-        "典型合作伙伴"
-      ]
+        "title": "合作伙伴 客户",
+        "subtitle": "与我们同行",
+        "statistics": ["使用次数", "评论", "客户", "典型合作伙伴"]
     },
     "about_us": {
-      "title": "关于*蓝色*美国*蓝色*",
-      "headline": "什么是",
-      "description": [
-        "我们很自豪能够成为*蓝色*多平台代理广告帐户*蓝色*的提供商，包括**Facebook、Google**。",
-        "我们致力于*蓝*优质服务*蓝*、*蓝*快速支持*蓝*、市场*蓝*最低的SERVICE*蓝*费用，为客户提供*蓝*全面的生态系统*蓝*。"
-      ],
-      "cta": "立即联系我们"
+        "title": "关于*蓝色*美国*蓝色*",
+        "headline": "什么是",
+        "description": [
+            "我们很自豪能够成为*蓝色*多平台代理广告帐户*蓝色*的提供商，包括**Facebook、Google**。",
+            "我们致力于*蓝*优质服务*蓝*、*蓝*快速支持*蓝*、市场*蓝*最低的SERVICE*蓝*费用，为客户提供*蓝*全面的生态系统*蓝*。"
+        ],
+        "cta": "立即联系我们"
     },
     "customer_support": {
-      "title": "我们的 24/7 客户支持团队",
-      "role": "客户支持",
-      "contact": "电报联系方式"
+        "title": "我们的 24/7 客户支持团队",
+        "role": "客户支持",
+        "contact": "电报联系方式"
     },
     "faq": {
-      "title": "常见问题解答",
-      "description": "找不到您正在寻找的答案？ <span class=\"text-blue-300\">请随时联系我们</span>。",
-      "questions": [
-        {
-          "question": "有哪些 <span class=\"text-blue-300\">好处</span> 租用Facebook广告账户的机构？",
-          "answer": "租用广告帐户使企业能够访问 <span class=\"text-blue-300\">专业知识和资源</span> 已建立的广告代理公司， <span class=\"text-blue-300\">减少学习曲线和潜在陷阱</span> 与自我管理的活动相关。 <span class=\"text-blue-300\">企业级业务经理（BM）</span>， 获得 <span class=\"text-blue-300\">24/7 Facebook 代表支持</span>，访问 <span class=\"text-blue-300\">1000 个数据点算法</span>, <span class=\"text-blue-300\">删除广告帐户限制</span>， 和 <span class=\"text-blue-300\">最大化</span> 他们每月的广告帐户支出。"
-        },
-        {
-          "question": "什么是 <span class=\"text-blue-300\">过程</span> 开始吧？",
-          "answer": "– <span class=\"text-blue-300\">请联系我们</span>。\n <span class=\"text-blue-300\">解释服务</span> 给你详细的。\n <span class=\"text-blue-300\">24小时至48小时内收到广告帐户</span>。\n <span class=\"text-blue-300\">启动您的广告</span>"
-        },
-        {
-          "question": "您与所有类型的企业合作吗？",
-          "answer": "我们 <span class=\"text-blue-300\">接受所有行业</span> 不违反平台政策。"
-        },
-        {
-          "question": "你们接受什么付款方式？",
-          "answer": "我们接受加密货币付款，特别是 <span class=\"text-blue-300\">泰达币</span>，为了方便。 <span class=\"text-blue-300\">派安盈</span>。"
-        },
-        {
-          "question": "如果我运行的产品不允许在 FB 广告上投放，并且帐户被禁用，是否需要支付额外费用？",
-          "answer": "正如我们之前提到的，我们不需要知道您想要运行什么产品。 <span class=\"text-blue-300\">总费用的 6-10%</span>，并提供一个 <span class=\"text-blue-300\">新广告帐户和新卡完全免费</span>。"
-        },
-        {
-          "question": "存入资金后，如何访问我的帐户来开展我的活动？",
-          "answer": "首先，您需要下载并注册 <span class=\"text-blue-300\">Adspower 或 Gologin</span> 帐户（您可以从Adspower.com或Gologin.com官方网站下载）。 <span class=\"text-blue-300\">分享个人资料</span> 与您在一起（个人资料包括 <span class=\"text-blue-300\">广告帐户和运行它的帐户、运行的页面和预装的像素</span>）。 <span class=\"text-blue-300\">登录个人资料</span> 专门分配给您设置广告并赚钱的。"
-        },
-        {
-          "question": "您能否提供有关 MDG Agency 所提供服务的更多信息？",
-          "answer": "我们提供 <span class=\"text-blue-300\">解决方案</span> 适合想要运营其产品但没有健康的 FB、GG 广告帐户或页面来执行此操作的合作伙伴。 <span class=\"text-blue-300\">接受所有产品</span> 来自我们的合作伙伴，包括 <span class=\"text-blue-300\">游戏、加密货币、招聘、投资</span>等等，并确保他们会 <span class=\"text-blue-300\">不会受到任何干扰</span> 在投放他们的广告时。 <span class=\"text-blue-300\">多个账户</span> 给我们的合作伙伴，如果任何帐户失败，我们将 <span class=\"text-blue-300\">立即更换</span> 确保客户广告活动的连续性。"
-        },
-        {
-          "question": "我需要支付多少费用才能使用你们的服务？",
-          "answer": "我们的合作伙伴将承担 <span class=\"text-blue-300\">只需要10%的费用</span> 基于总支出（<span class=\"text-blue-300\">没有额外费用</span> 将会被收费）。 <span class=\"text-blue-300\">1000 美元</span>，您需要额外支付6-10%，总计 <span class=\"text-blue-300\">$1060 – $1100</span>。"
-        },
-        {
-          "question": "如果我存入 500 美元并花费了大约 330 美元，并且您提供的我的帐户被锁定，那么剩余余额会怎样？我如何知道？",
-          "answer": "每个 Facebook 帐户都有自己的广告帐户。 <span class=\"text-blue-300\">显示您已花费金额的发票</span>，这样您就可以轻松检查余额是否匹配。 <span class=\"text-blue-300\">170 美元（500 美元 – 330 美元）</span>，这将是 <span class=\"text-blue-300\">转入下一个周期的广告账户</span> 我们为您提供。 <span class=\"text-blue-300\">退还剩余的 170 美元</span> 给你。"
-        },
-        {
-          "question": "我可以存入的最低和最高金额是多少？你们能为我提供多少预算？",
-          "answer": "最低存款费用为 <span class=\"text-blue-300\">50 美元</span> – 对于想要测试我们产品的首次客户。\n <span class=\"text-blue-300\">200 美元</span> – 对于以前使用过我们服务的客户。\n <span class=\"text-blue-300\">100,000 美元至 500,000 美元</span> 为你。"
-        },
-        {
-          "question": "假设您正在投放广告并且您的 Facebook 广告帐户被禁用，那么您需要多长时间才能获得新帐户？",
-          "answer": "我们将提供一个 <span class=\"text-blue-300\">立即新帐户</span> 收到您的通知后。 <span class=\"text-blue-300\">随时可用</span> 1-2 人在线协助我们的合作伙伴。"
-        },
-        {
-          "question": "我应该选择哪一个，代理账户还是普通账户？",
-          "answer": "尽管我们提供两种类型的帐户：常规帐户和代理帐户。\n\n <span class=\"text-blue-300\">常规广告帐户通常更具成本效益</span> 第一个月比代理账户多出大约 700-800 美元，接下来的几个月多出 400 美元。\n <span class=\"text-blue-300\">更强</span> 与普通账户相比，我们提供 <span class=\"text-blue-300\">免费更换</span> 如果 Facebook 广告帐户被禁用。 <span class=\"text-blue-300\">几乎一样</span>。\n\n <span class=\"text-blue-300\">大型项目</span> 运行时间较短，例如 ICO 活动，每天需要 10,000 美元或更高的预算。"
-        }
-      ]
+        "title": "常见问题解答",
+        "description": "找不到您正在寻找的答案？ <span class=\"text-blue-300\">请随时联系我们</span>。",
+        "questions": [
+            {
+                "question": "有哪些 <span class=\"text-blue-300\">好处</span> 租用Facebook广告账户的机构？",
+                "answer": "租用广告帐户使企业能够访问 <span class=\"text-blue-300\">专业知识和资源</span> 已建立的广告代理公司， <span class=\"text-blue-300\">减少学习曲线和潜在陷阱</span> 与自我管理的活动相关。 <span class=\"text-blue-300\">企业级业务经理（BM）</span>， 获得 <span class=\"text-blue-300\">24/7 Facebook 代表支持</span>，访问 <span class=\"text-blue-300\">1000 个数据点算法</span>, <span class=\"text-blue-300\">删除广告帐户限制</span>， 和 <span class=\"text-blue-300\">最大化</span> 他们每月的广告帐户支出。"
+            },
+            {
+                "question": "什么是 <span class=\"text-blue-300\">过程</span> 开始吧？",
+                "answer": "– <span class=\"text-blue-300\">请联系我们</span>。\n <span class=\"text-blue-300\">解释服务</span> 给你详细的。\n <span class=\"text-blue-300\">24小时至48小时内收到广告帐户</span>。\n <span class=\"text-blue-300\">启动您的广告</span>"
+            },
+            {
+                "question": "您与所有类型的企业合作吗？",
+                "answer": "我们 <span class=\"text-blue-300\">接受所有行业</span> 不违反平台政策。"
+            },
+            {
+                "question": "你们接受什么付款方式？",
+                "answer": "我们接受加密货币付款，特别是 <span class=\"text-blue-300\">泰达币</span>，为了方便。 <span class=\"text-blue-300\">派安盈</span>。"
+            },
+            {
+                "question": "如果我运行的产品不允许在 FB 广告上投放，并且帐户被禁用，是否需要支付额外费用？",
+                "answer": "正如我们之前提到的，我们不需要知道您想要运行什么产品。 <span class=\"text-blue-300\">总费用的 6-10%</span>，并提供一个 <span class=\"text-blue-300\">新广告帐户和新卡完全免费</span>。"
+            },
+            {
+                "question": "存入资金后，如何访问我的帐户来开展我的活动？",
+                "answer": "首先，您需要下载并注册 <span class=\"text-blue-300\">Adspower 或 Gologin</span> 帐户（您可以从Adspower.com或Gologin.com官方网站下载）。 <span class=\"text-blue-300\">分享个人资料</span> 与您在一起（个人资料包括 <span class=\"text-blue-300\">广告帐户和运行它的帐户、运行的页面和预装的像素</span>）。 <span class=\"text-blue-300\">登录个人资料</span> 专门分配给您设置广告并赚钱的。"
+            },
+            {
+                "question": "您能否提供有关 MDG Agency 所提供服务的更多信息？",
+                "answer": "我们提供 <span class=\"text-blue-300\">解决方案</span> 适合想要运营其产品但没有健康的 FB、GG 广告帐户或页面来执行此操作的合作伙伴。 <span class=\"text-blue-300\">接受所有产品</span> 来自我们的合作伙伴，包括 <span class=\"text-blue-300\">游戏、加密货币、招聘、投资</span>等等，并确保他们会 <span class=\"text-blue-300\">不会受到任何干扰</span> 在投放他们的广告时。 <span class=\"text-blue-300\">多个账户</span> 给我们的合作伙伴，如果任何帐户失败，我们将 <span class=\"text-blue-300\">立即更换</span> 确保客户广告活动的连续性。"
+            },
+            {
+                "question": "我需要支付多少费用才能使用你们的服务？",
+                "answer": "我们的合作伙伴将承担 <span class=\"text-blue-300\">只需要10%的费用</span> 基于总支出（<span class=\"text-blue-300\">没有额外费用</span> 将会被收费）。 <span class=\"text-blue-300\">1000 美元</span>，您需要额外支付6-10%，总计 <span class=\"text-blue-300\">$1060 – $1100</span>。"
+            },
+            {
+                "question": "如果我存入 500 美元并花费了大约 330 美元，并且您提供的我的帐户被锁定，那么剩余余额会怎样？我如何知道？",
+                "answer": "每个 Facebook 帐户都有自己的广告帐户。 <span class=\"text-blue-300\">显示您已花费金额的发票</span>，这样您就可以轻松检查余额是否匹配。 <span class=\"text-blue-300\">170 美元（500 美元 – 330 美元）</span>，这将是 <span class=\"text-blue-300\">转入下一个周期的广告账户</span> 我们为您提供。 <span class=\"text-blue-300\">退还剩余的 170 美元</span> 给你。"
+            },
+            {
+                "question": "我可以存入的最低和最高金额是多少？你们能为我提供多少预算？",
+                "answer": "最低存款费用为 <span class=\"text-blue-300\">50 美元</span> – 对于想要测试我们产品的首次客户。\n <span class=\"text-blue-300\">200 美元</span> – 对于以前使用过我们服务的客户。\n <span class=\"text-blue-300\">100,000 美元至 500,000 美元</span> 为你。"
+            },
+            {
+                "question": "假设您正在投放广告并且您的 Facebook 广告帐户被禁用，那么您需要多长时间才能获得新帐户？",
+                "answer": "我们将提供一个 <span class=\"text-blue-300\">立即新帐户</span> 收到您的通知后。 <span class=\"text-blue-300\">随时可用</span> 1-2 人在线协助我们的合作伙伴。"
+            },
+            {
+                "question": "我应该选择哪一个，代理账户还是普通账户？",
+                "answer": "尽管我们提供两种类型的帐户：常规帐户和代理帐户。\n\n <span class=\"text-blue-300\">常规广告帐户通常更具成本效益</span> 第一个月比代理账户多出大约 700-800 美元，接下来的几个月多出 400 美元。\n <span class=\"text-blue-300\">更强</span> 与普通账户相比，我们提供 <span class=\"text-blue-300\">免费更换</span> 如果 Facebook 广告帐户被禁用。 <span class=\"text-blue-300\">几乎一样</span>。\n\n <span class=\"text-blue-300\">大型项目</span> 运行时间较短，例如 ICO 活动，每天需要 10,000 美元或更高的预算。"
+            }
+        ]
     }
-  }
+}

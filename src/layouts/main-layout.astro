@@ -1,5 +1,5 @@
 ---
-import Header from '@/components/header.tsx';
+import Header from '@/components/header';
 import favicon from '@/images/favicon.png';
 import 'aos/dist/aos.css';
 import ScrollToTop from '@/components/scroll-to-top.astro';
@@ -38,7 +38,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
             rel="preload"
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
             as="style"
-            onload="this.onload=null;this.rel='stylesheet'"
         />
         <noscript>
             <link

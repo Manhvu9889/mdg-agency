@@ -1,6 +1,7 @@
 ---
 import MainLayout from '@/layouts/main-layout.astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 
 type Post = CollectionEntry<'bai-viet'>;
 
@@ -19,6 +20,7 @@ type Props = {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const post = entry.data;
+const currentUrl = Astro.url.href;
 ---
 
 <MainLayout
@@ -32,10 +34,71 @@ const post = entry.data;
                 class="mb-4 text-center text-3xl font-bold text-gray-900 sm:text-4xl"
             >
                 {post.title}
-            </h1><div class="mb-4 text-center">
-                <span class="text-sm text-gray-600">{post.readTime}</span>
+            </h1>
+            <div
+                class="mb-8 flex items-center justify-center space-x-4 text-sm text-gray-600"
+            >
+                <span class="flex items-center">
+                    <Icon name="fa6-solid:clock" class="mr-2 h-4 w-4" />
+                    {post.readTime}
+                </span>
             </div>
         </header>
+        <div
+            class="fixed right-8 top-1/2 hidden -translate-y-1/2 flex-col items-end justify-end md:flex"
+            id="shareMenu"
+        >
+            <button
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white shadow-md transition-all duration-200 hover:bg-blue-700"
+                id="shareButton"
+                aria-label="Share"
+            >
+                <Icon
+                    name="fa6-regular:share-from-square"
+                    class="h-5 w-5 transition-transform duration-200"
+                    id="shareIcon"
+                />
+                <Icon
+                    name="fa6-solid:xmark"
+                    class="hidden h-5 w-5 transition-transform duration-200"
+                    id="closeIcon"
+                />
+            </button>
+            <div
+                class="mt-3 space-y-2 transition-all duration-200"
+                id="shareOptions"
+            >
+                <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex h-10 translate-y-2 transform items-center justify-center space-x-2 rounded-full bg-blue-600 px-4 text-white opacity-0 shadow-md transition-all duration-200 hover:bg-blue-700 hover:shadow-lg"
+                    aria-label="Share on Facebook"
+                >
+                    <Icon name="fa6-brands:facebook-f" class="h-5 w-5" />
+                    <span>Share to Facebook</span>
+                </a>
+                <a
+                    href={`https://t.me/share/url?url=${currentUrl}&text=${encodeURIComponent(post.title)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex h-10 translate-y-2 transform items-center justify-center space-x-2 rounded-full bg-blue-400 px-4 text-white opacity-0 shadow-md transition-all duration-200 hover:bg-blue-500 hover:shadow-lg"
+                    aria-label="Share on Telegram"
+                >
+                    <Icon name="fa6-brands:telegram" class="h-5 w-5" />
+                    <span>Share to Telegram</span>
+                </a>
+            </div>
+        </div>
+
+        <button
+            class="fixed bottom-20 right-8 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg transition-colors hover:bg-blue-700 md:hidden"
+            id="mobileShare"
+            aria-label="Share"
+        >
+            <Icon name="fa6-regular:share-from-square" class="h-5 w-5" />
+        </button>
+
         <div
             class="prose prose-lg mx-auto max-w-none prose-headings:font-bold prose-a:text-blue-600 prose-img:mx-auto prose-img:w-full prose-img:rounded-lg prose-img:shadow-md"
         >
@@ -52,3 +115,71 @@ const post = entry.data;
         </div>
     </article>
 </MainLayout>
+
+<script>
+    const mobileShareBtn = document.getElementById('mobileShare');
+    if (mobileShareBtn) {
+        mobileShareBtn.addEventListener('click', async () => {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: document.title,
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.error('Error sharing:', err);
+                }
+            }
+        });
+    }
+    const shareButton = document.getElementById('shareButton');
+    const shareOptions = document.getElementById('shareOptions');
+    const shareLinks = shareOptions?.querySelectorAll('a');
+    const shareIcon = document.getElementById('shareIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    let isOpen = false;
+
+    if (shareButton && shareOptions && shareLinks && shareIcon && closeIcon) {
+        shareButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isOpen = !isOpen;
+
+            if (isOpen) {
+                shareOptions.style.display = 'block';
+                shareIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                setTimeout(() => {
+                    shareLinks.forEach((link, index) => {
+                        setTimeout(() => {
+                            link.classList.remove('opacity-0', 'translate-y-2');
+                        }, index * 100);
+                    });
+                }, 0);
+            } else {
+                shareLinks.forEach((link) => {
+                    link.classList.add('opacity-0', 'translate-y-2');
+                });
+                shareIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                setTimeout(() => {
+                    shareOptions.style.display = 'none';
+                }, 200);
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (isOpen && !shareOptions.contains(event.target as Node)) {
+                isOpen = false;
+                shareLinks.forEach((link) => {
+                    link.classList.add('opacity-0', 'translate-y-2');
+                });
+                shareIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                setTimeout(() => {
+                    shareOptions.style.display = 'none';
+                }, 200);
+            }
+        });
+    }
+</script>

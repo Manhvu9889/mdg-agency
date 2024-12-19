@@ -18,7 +18,7 @@ declare module 'astro:content' {
                         | 'content-writer'
                         | 'other';
                     readTime: string;
-                    date: Date;
+                    date: string;
                 };
             };
         };
@@ -29,6 +29,5 @@ declare module 'astro:content' {
 type NetlifyLocals = import('@astrojs/netlify').NetlifyLocals;
 
 declare namespace App {
-    interface Locals extends NetlifyLocals {
-    }
+    interface Locals extends NetlifyLocals {}
 }

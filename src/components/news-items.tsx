@@ -97,7 +97,14 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
     }, [searchQuery, debouncedSearch]);
 
     const filteredPosts = useMemo(() => {
-        return posts.filter((post) => {
+        const sortedPosts = [...posts].sort((a, b) => {
+            return (
+                new Date(b.data.date).getTime() -
+                new Date(a.data.date).getTime()
+            );
+        });
+
+        return sortedPosts.filter((post) => {
             const matchesSearch =
                 post.data.title
                     .toLowerCase()

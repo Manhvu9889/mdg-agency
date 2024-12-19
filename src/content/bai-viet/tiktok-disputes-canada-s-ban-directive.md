@@ -1,12 +1,14 @@
 ---
 title: TikTok Disputes Canada’s Ban Directive
 description: TikTok disputes Canada’s directive to remove its app, citing
-  concerns over fairness and regulation amidst national security claims.
+    concerns over fairness and regulation amidst national security claims.
 thumbnail: src/assets/snapedit_1734345263155.webp
 category: tiktok
 readTime: 5 min read
+date: 19/12/2024
 ---
-![ad account rental](src/assets/snapedit_1734345263155.webp "TikTok Disputes Canada’s Ban Directive")
+
+![ad account rental](src/assets/snapedit_1734345263155.webp 'TikTok Disputes Canada’s Ban Directive')
 
 As TikTok continues to face scrutiny in the U.S., where a potential sell-off bill could force the company out next month, it now finds itself in a similar battle in Canada. Canadian officials have labeled the platform a national security risk, threatening its operations in the country.
 
