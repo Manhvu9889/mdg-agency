@@ -6,7 +6,7 @@ description: 'Instagram Launches ‘Collage’ Option for Stories: A New Creativ
 thumbnail: src/assets/ig_collage4.webp
 category: instagram
 readTime: 5 min read
-date: 2024-12-19 09:00
+date: 2024-12-18 09:00
 ---
 
 ![Instagram Launches ‘Collage’ Option for Stories: A New Creative Tool for Brands and the Potential of Facebook Account Rental for Ads](src/assets/ig_collage4.webp 'Instagram Launches ‘Collage’ Option for Stories: A New Creative Tool for Brands')
