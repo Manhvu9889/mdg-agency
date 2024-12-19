@@ -5,7 +5,7 @@ description: Meta Shares Insights Into the Performance of Its AI-Based Ad
 thumbnail: src/assets/meta-facebook-ai-advertising-tools.webp
 category: facebook
 readTime: 5 min read
-date: 19/12/2024
+date: 2024-12-19 09:00
 ---
 
 ![Meta Shares Insights Into the Performance of Its AI-Based Ad Elements and How to Rent Facebook Ad Accounts for Better Results](src/assets/meta-facebook-ai-advertising-tools.webp 'Meta Shares Insights Into the Performance of Its AI-Based Ad Elements')

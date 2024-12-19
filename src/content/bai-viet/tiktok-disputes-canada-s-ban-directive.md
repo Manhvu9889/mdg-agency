@@ -5,7 +5,7 @@ description: TikTok disputes Canada’s directive to remove its app, citing
 thumbnail: src/assets/snapedit_1734345263155.webp
 category: tiktok
 readTime: 5 min read
-date: 19/12/2024
+date: 2024-12-19 09:00
 ---
 
 ![ad account rental](src/assets/snapedit_1734345263155.webp 'TikTok Disputes Canada’s Ban Directive')

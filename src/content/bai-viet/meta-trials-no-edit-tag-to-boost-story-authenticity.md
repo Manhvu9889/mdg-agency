@@ -6,7 +6,7 @@ description: Meta is testing a "No Edit" tag for Stories, allowing users to
 thumbnail: src/assets/fb_no_edit.webp
 category: facebook
 readTime: 5 min read
-date: 19/12/2024
+date: 2024-12-19 09:00
 ---
 
 ![facebook ad account rental](src/assets/fb_no_edit.webp "Meta Trials 'No Edit' Tag to Boost Story Authenticity")

@@ -42,11 +42,11 @@ collections:
                 label: 'Ngày đăng',
                 name: 'date',
                 widget: 'datetime',
-                format: 'DD/MM/YYYY',
+                format: 'YYYY-MM-DD HH:mm',
                 date_format: 'DD/MM/YYYY',
-                time_format: false,
+                time_format: 'HH:mm',
                 required: true,
-                default: () => new Date().toLocaleDateString('vi-VN')
+                default: () => new Date().toISOString().slice(0, 16).replace('T', ' ')
             }
           - {
                 label: 'Danh mục',
