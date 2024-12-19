@@ -8,6 +8,7 @@ import {
     faEdit,
     faEllipsisH,
     faSearch,
+    faSort,
     faSpinner
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -67,6 +68,37 @@ const categories = [
     }
 ] as const;
 
+type SortOption = {
+    id: string;
+    label: string;
+    sortFn: (a: BlogPost, b: BlogPost) => number;
+};
+
+const sortOptions: SortOption[] = [
+    {
+        id: 'newest',
+        label: 'Newest First',
+        sortFn: (a, b) =>
+            new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+    },
+    {
+        id: 'oldest',
+        label: 'Oldest First',
+        sortFn: (a, b) =>
+            new Date(a.data.date).getTime() - new Date(b.data.date).getTime()
+    },
+    {
+        id: 'a-z',
+        label: 'A-Z',
+        sortFn: (a, b) => a.data.title.localeCompare(b.data.title)
+    },
+    {
+        id: 'z-a',
+        label: 'Z-A',
+        sortFn: (a, b) => b.data.title.localeCompare(a.data.title)
+    }
+];
+
 const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
@@ -75,6 +107,7 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
         null
     );
     const [isLoading, setIsLoading] = useState(false);
+    const [sortBy, setSortBy] = useState<string>('newest');
 
     const debouncedSearch = useCallback(
         debounce((query: string) => {
@@ -97,12 +130,9 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
     }, [searchQuery, debouncedSearch]);
 
     const filteredPosts = useMemo(() => {
-        const sortedPosts = [...posts].sort((a, b) => {
-            return (
-                new Date(b.data.date).getTime() -
-                new Date(a.data.date).getTime()
-            );
-        });
+        const sortedPosts = [...posts].sort(
+            sortOptions.find((option) => option.id === sortBy)?.sortFn
+        );
 
         return sortedPosts.filter((post) => {
             const matchesSearch =
@@ -116,7 +146,7 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
                 !selectedCategory || post.data.category === selectedCategory;
             return matchesSearch && matchesCategory;
         });
-    }, [posts, debouncedSearchQuery, selectedCategory]);
+    }, [posts, debouncedSearchQuery, selectedCategory, sortBy]);
 
     const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE);
     const currentPosts = filteredPosts.slice(
@@ -127,28 +157,62 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
     return (
         <div>
             <div className="mb-12 rounded-2xl border border-gray-100 bg-white p-6 shadow-lg md:p-8">
-                <div className="relative mb-8">
-                    <input
-                        type="search"
-                        placeholder="Search articles..."
-                        className="w-full cursor-text rounded-xl border-2 border-gray-100 bg-gray-50 px-4 py-2 pl-12 text-lg transition-all duration-200 placeholder:text-gray-400 hover:bg-gray-100 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-100"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        aria-label="Search articles"
-                    />
-                    <FontAwesomeIcon
-                        icon={isLoading ? faSpinner : faSearch}
-                        className={`absolute left-4 top-1/2 -translate-y-1/2 transform text-xl ${isLoading ? 'animate-spin text-blue-500' : 'text-gray-400'}`}
-                        aria-hidden="true"
-                    />
+                <div className="mb-8 space-y-8">
+                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
+                        <div className="relative flex-1">
+                            <input
+                                type="search"
+                                placeholder="Search articles..."
+                                className="w-full cursor-text rounded-xl border-2 border-gray-100 bg-gray-50 px-4 py-2 pl-12 text-lg transition-all duration-200 placeholder:text-gray-400 hover:bg-gray-100 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-100"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                aria-label="Search articles"
+                            />
+                            <FontAwesomeIcon
+                                icon={isLoading ? faSpinner : faSearch}
+                                className={`absolute left-4 top-1/2 -translate-y-1/2 transform text-xl ${isLoading ? 'animate-spin text-blue-500' : 'text-gray-400'}`}
+                                aria-hidden="true"
+                            />
+                        </div>
+
+                        <div className="flex items-center gap-3 md:min-w-[200px]">
+                            <FontAwesomeIcon
+                                icon={faSort}
+                                className="text-gray-400"
+                                aria-hidden="true"
+                            />
+                            <select
+                                value={sortBy}
+                                onChange={(e) => setSortBy(e.target.value)}
+                                className="w-full rounded-xl border-2 border-gray-100 bg-gray-50 px-4 py-2 text-gray-700 transition-all duration-200 hover:bg-gray-100 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-100"
+                                aria-label="Sort articles by"
+                            >
+                                {sortOptions.map((option) => (
+                                    <option key={option.id} value={option.id}>
+                                        {option.label}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="space-y-3">
-                    <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-600">
-                        Filter by Platform
-                    </h2>
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-600">
+                            Filter by Platform
+                        </h2>
+                        {selectedCategory && (
+                            <button
+                                onClick={() => setSelectedCategory(null)}
+                                className="text-sm text-gray-500 transition-colors duration-200 hover:text-blue-500"
+                            >
+                                Clear filter
+                            </button>
+                        )}
+                    </div>
                     <div
-                        className="flex flex-wrap gap-3"
+                        className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:gap-3"
                         aria-label="Filter by category"
                     >
                         {categories.map((category) => (
@@ -161,7 +225,7 @@ const NewsItems: React.FC<NewsItemsProps> = ({ posts }) => {
                                             : category.id
                                     )
                                 }
-                                className={`flex cursor-pointer items-center gap-2 rounded-xl px-5 py-3 text-sm font-medium transition-all duration-200 ease-in-out hover:scale-105 active:scale-95 ${
+                                className={`flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200 ease-in-out hover:scale-105 active:scale-95 sm:w-auto sm:px-5 ${
                                     selectedCategory === category.id
                                         ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25 ring-2 ring-blue-500/50'
                                         : 'bg-gray-50 text-gray-700 hover:bg-gray-100 hover:shadow'

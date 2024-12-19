@@ -46,7 +46,7 @@ collections:
                 date_format: 'DD/MM/YYYY',
                 time_format: 'HH:mm',
                 required: true,
-                default: () => new Date().toISOString().slice(0, 16).replace('T', ' ')
+                default: '{{now}}'
             }
           - {
                 label: 'Danh mục',
