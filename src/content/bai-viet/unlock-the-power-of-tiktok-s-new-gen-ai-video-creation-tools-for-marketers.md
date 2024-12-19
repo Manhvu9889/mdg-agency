@@ -6,7 +6,7 @@ description: Unlock TikTok's Gen AI video creation tools with Rent TikTok Ad
 thumbnail: src/assets/tiktok_video_generation.webp
 category: tiktok
 readTime: 5 min read
-date: 19/12/2024
+date: 2024-12-19 09:00
 ---
 
 ![Unlock TikTok's Gen AI video creation tools with Rent TikTok Ad Account. With TikTok Ad Account Rental, easily create and customize content, scale your campaigns, and maximize your brand’s reach](src/assets/tiktok_video_generation.webp 'Unlock the Power of TikTok’s New Gen AI Video Creation Tools for Marketers')

@@ -4,7 +4,7 @@ description: Unlock Q5 Marketing Potential with Facebook Ad Account Rental
 thumbnail: src/assets/meta_q5_info.webp
 category: facebook
 readTime: 5 min read
-date: 19/12/2024
+date: 2024-12-19 09:00
 ---
 
 As the holiday season winds down, a golden marketing window opens up. Meta has recently shared insights into the untapped marketing potential of Q5—the period after Christmas and before the New Year. During this time, most people are still in holiday mode, spending more time on social apps like Facebook and Instagram.
