@@ -26,9 +26,12 @@ export default defineConfig({
                     'dollar-sign',
                     'cubes',
                     'arrow-right',
-                    'arrow-left'
+                    'arrow-left',
+                    'clock',
+                    'xmark'
                 ],
-                'fa6-brands': ['telegram']
+                'fa6-brands': ['telegram', 'facebook-f'],
+                'fa6-regular': ['share-from-square']
             }
         }),
         playformCompress({

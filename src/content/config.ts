@@ -17,7 +17,8 @@ const baiVietCollection = defineCollection({
                 'content-writer',
                 'other'
             ]),
-            readTime: z.string()
+            readTime: z.string(),
+            date: z.coerce.date()
         })
 });
 export const collections = {
