@@ -3,6 +3,7 @@ title: Meta Faces $263 Million Fine in Europe for 2017 Data Breach
 description: Meta faces a $263 million fine for a 2017 data breach, underscoring
   privacy concerns and regulatory scrutiny.
 thumbnail: src/assets/attachment_3b_20filename_3dfbf3f47a-2233-4a77-90b0-7ad42694a85b.webp
+date: 2024-12-22 23:39
 category: facebook
 readTime: 5 min read
 ---
