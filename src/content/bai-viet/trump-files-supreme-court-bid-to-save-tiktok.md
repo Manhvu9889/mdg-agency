@@ -1,12 +1,14 @@
 ---
 title: Trump Files Supreme Court Bid to Save TikTok
 description: Trump files an amicus brief with the U.S. Supreme Court to delay
-  TikTok's ban and negotiate a deal to keep the app available for U.S. users.
+    TikTok's ban and negotiate a deal to keep the app available for U.S. users.
 thumbnail: src/assets/eggfrc3utdeelxi5tt_3cw.webp
 category: tiktok
 readTime: 5 min read
+date: 2024-12-19 09:00
 ---
-![ad account rental](src/assets/eggfrc3utdeelxi5tt_3cw.webp "Trump Files Supreme Court Bid to Save TikTok")
+
+![ad account rental](src/assets/eggfrc3utdeelxi5tt_3cw.webp 'Trump Files Supreme Court Bid to Save TikTok')
 
 ### The Countdown to TikTok's Potential Ban
 
