@@ -1,14 +1,15 @@
 ---
 title: Zuckerberg Provides More Context on Meta’s Moderation Shift
 description: Mark Zuckerberg explains Meta's shift towards less moderation and
-  more political content, responding to user demand and focusing on freedom of
-  speech.
+    more political content, responding to user demand and focusing on freedom of
+    speech.
 thumbnail: src/assets/speech_11zon.webp
 date: 2025-01-10 21:23
 category: facebook
 readTime: 5 min read
 ---
-![Zuckerberg Provides More Context on Meta’s Moderation Shift](src/assets/speech_11zon.webp "ad account rental")
+
+![Zuckerberg Provides More Context on Meta’s Moderation Shift](src/assets/speech_11zon.webp 'ad account rental')
 
 **Introduction to Meta’s Moderation Shift**
 
