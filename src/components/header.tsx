@@ -20,7 +20,7 @@ const navigationItems: NavItem[] = [
     { label: en.navigation.items[3], href: '/#contact' },
     { label: en.navigation.items[4], href: '/#news' },
     { label: en.navigation.items[5], href: '/#faq' }
-] as const;
+];
 
 const ruNavigationItems: NavItem[] = [
     { label: ru.navigation.items[0], href: '/ru#home' },
@@ -29,7 +29,7 @@ const ruNavigationItems: NavItem[] = [
     { label: ru.navigation.items[3], href: '/ru#contact' },
     { label: ru.navigation.items[4], href: '/ru#news' },
     { label: ru.navigation.items[5], href: '/ru#faq' }
-] as const;
+];
 
 const telegramLink = 'https://t.me/MDG_Agency';
 const Header: FC = (): ReactElement => {
