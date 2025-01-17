@@ -24,7 +24,6 @@ pnpm-debug.log*
 .idea/
 
 # lock file
-pnpm-lock.yaml
 yarn.lock
 package-lock.json
 

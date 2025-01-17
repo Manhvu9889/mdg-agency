@@ -1,8 +1,8 @@
 ---
 title: Meta Appoints New Public Policy Team to Align with Trump Administration
 description: Meta reshapes its public policy team, appointing Joel Kaplan to
-  align with the Trump administration, signaling a shift in political speech and
-  tech strategy.
+    align with the Trump administration, signaling a shift in political speech and
+    tech strategy.
 thumbnail: src/assets/leonardo_phoenix_10_a_modern_corporatestyle_illustration_depic_2.webp
 date: 2025-01-17 13:46
 category: facebook
